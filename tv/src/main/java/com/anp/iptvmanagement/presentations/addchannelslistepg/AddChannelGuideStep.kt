@@ -3,6 +3,7 @@ package com.anp.iptvmanagement.presentations.addchannelslistepg
 import android.os.Bundle
 import android.support.v17.leanback.widget.GuidanceStylist
 import android.support.v17.leanback.widget.GuidedAction
+import android.support.v4.content.ContextCompat
 import android.util.Log
 import com.anp.commons.data.AddChannelsListRepository
 import com.anp.commons.data.entities.MyChannelsList
@@ -12,15 +13,14 @@ import com.anp.iptvmanagement.R
 import com.anp.iptvmanagement.presentations.base.BaseGuideStep
 import rx.Observer
 
-
 class AddChannelGuideStep : BaseGuideStep() {
-
   private var myChannelsList: MyChannelsList? = null
 
   override fun onCreateGuidance(savedInstanceState: Bundle?): GuidanceStylist.Guidance {
     val title = getString(R.string.settings_add_channel_title)
     val description = getString(R.string.settings_add_channel_legend)
-    val icon = activity.getDrawable(R.drawable.ic_cloud_download_white_48dp)
+    //val icon = activity.getDrawable(R.drawable.ic_cloud_download_white_48dp)
+    val icon = ContextCompat.getDrawable(activity, R.drawable.ic_cloud_download_white_48dp)
     return GuidanceStylist.Guidance(title, description, "", icon)
   }
 

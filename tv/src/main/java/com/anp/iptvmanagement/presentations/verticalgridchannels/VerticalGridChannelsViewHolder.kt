@@ -17,8 +17,8 @@ class VerticalGridChannelsViewHolder(private val itemView: View,
 
 
   companion object {
-    val CARD_WIDTH = 313
-    val CARD_HEIGHT = 200
+    val CARD_WIDTH = 313 // 600 // 313
+    val CARD_HEIGHT = 200 // 67 // 200
   }
 
   var channel: Channel? = null

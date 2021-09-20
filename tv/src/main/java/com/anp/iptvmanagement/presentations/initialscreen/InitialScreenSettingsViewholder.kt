@@ -15,7 +15,7 @@ class InitialScreenSettingsViewholder(private val itemView: View) : Presenter.Vi
     cardView?.let { imageCardView ->
       imageCardView.titleText = settingOption.title
       imageCardView.mainImageView.setImageDrawable(
-          imageCardView.context.resources.getDrawable(settingOption.iconResource, null))
+          imageCardView.context.resources.getDrawable(settingOption.iconResource))
     }
   }
 }

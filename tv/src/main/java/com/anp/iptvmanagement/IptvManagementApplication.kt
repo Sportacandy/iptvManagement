@@ -1,9 +1,10 @@
 package com.anp.iptvmanagement
 
 import android.app.Application
+import android.support.multidex.MultiDexApplication
 import com.anp.commons.data.database.DataBaseManager
 
-class IptvManagementApplication : Application() {
+class IptvManagementApplication : MultiDexApplication() {
 
 
   override fun onCreate() {

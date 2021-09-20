@@ -48,7 +48,7 @@ class VerticalGridChannelsFragment : VerticalGridFragment(), GridChannelsView {
 
   private fun interceptData() {
     if (activity != null && activity.intent != null) {
-      channelGroup = activity.intent.extras.getParcelable<Channel>(
+      channelGroup = activity.intent.extras!!.getParcelable<Channel>(
           VerticalGridChannelsActivity.KEY_INTENT_CHANNEL)
     }
   }

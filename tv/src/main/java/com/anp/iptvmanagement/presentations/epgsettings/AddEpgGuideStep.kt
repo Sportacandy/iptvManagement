@@ -3,6 +3,7 @@ package com.anp.iptvmanagement.presentations.epgsettings
 import android.os.Bundle
 import android.support.v17.leanback.widget.GuidanceStylist
 import android.support.v17.leanback.widget.GuidedAction
+import android.support.v4.content.ContextCompat
 import com.anp.commons.data.EpgRepository
 import com.anp.commons.managers.EpgCoordinator
 import com.anp.iptvmanagement.R
@@ -21,7 +22,8 @@ open class AddEpgGuideStep : BaseGuideStep() {
   override fun onCreateGuidance(savedInstanceState: Bundle?): GuidanceStylist.Guidance {
     val title = getString(R.string.settings_epg_title)
     val description = getString(R.string.settings_epg_legend)
-    val icon = activity.getDrawable(R.drawable.ic_add_to_queue_white_48dp)
+    //val icon = activity.getDrawable(R.drawable.ic_add_to_queue_white_48dp)
+    val icon = ContextCompat.getDrawable(activity, R.drawable.ic_add_to_queue_white_48dp)
     return GuidanceStylist.Guidance(title, description, "", icon)
   }
 

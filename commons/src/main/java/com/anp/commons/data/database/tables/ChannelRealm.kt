@@ -10,7 +10,7 @@ open class ChannelRealm : RealmObject() {
 
 
   var id: String = ""
-  @PrimaryKey
+  //@PrimaryKey
   var titleChannel: String = ""
   var urlStream: String = ""
   var group: String = ""

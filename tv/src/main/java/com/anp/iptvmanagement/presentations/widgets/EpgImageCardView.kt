@@ -57,7 +57,6 @@ class EpgImageCardView : BaseCardView {
     seekBar = seekBar_widget
     epgProgramTitle = epg_program_title
 
-
     val cardAttrs = context.obtainStyledAttributes(
         defStyle, android.support.v17.leanback.R.styleable.lbImageCardView)
     cardAttrs.recycle()

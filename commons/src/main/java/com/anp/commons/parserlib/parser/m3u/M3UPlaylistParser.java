@@ -26,6 +26,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.Collections;
+import java.util.ArrayList;
 import java.util.Set;
 import org.xml.sax.SAXException;
 
@@ -53,7 +54,7 @@ public class M3UPlaylistParser extends AbstractParser {
   private void parsePlaylist(InputStream stream, ChannelsList channelsList) throws IOException {
     String line = null;
     BufferedReader reader = null;
-    Channel channel = null;
+    ArrayList<Channel> channels = new ArrayList<>();
 
     // Start the query
     reader = new BufferedReader(new InputStreamReader(stream));
@@ -61,19 +62,21 @@ public class M3UPlaylistParser extends AbstractParser {
     while ((line = reader.readLine()) != null) {
       if (!(line.equalsIgnoreCase(EXTENDED_INFO_TAG) || line.trim().equals(""))) {
         if (line.matches(RECORD_TAG)) {
-          channel = new Channel();
-          channel.setTitleChannel(line.replaceAll("^(.*?),", ""));
-          parseAttributtes(line, channel);
+          parseAttributtes(line, channels);
           processingEntry = true;
         } else {
           if (!processingEntry) {
-            channel = new Channel();
+            channels.add(new Channel());
           }
-          if (channel != null) {
-            channel.setUrlStream(line.trim());
-            if  (channel.getId() != null && !channel.getId().isEmpty()){
-              savePlaylistFile(channel, channelsList);
+          if (channels.size() > 0) {
+            String url = line.trim();
+            for (Channel channel : channels) {
+              if (channel.getId() != null && !channel.getId().isEmpty()) {
+                channel.setUrlStream(url);
+                savePlaylistFile(channel, channelsList);
+              }
             }
+            channels.clear();
           }
         }
       }

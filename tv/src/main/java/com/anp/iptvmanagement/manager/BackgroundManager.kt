@@ -36,7 +36,7 @@ class BackgroundManager(private var activity: Activity) {
     mBackgroundManager = BackgroundManager.getInstance(activity)
     mBackgroundManager.attach(activity.window)
     mDefaultBackground = ContextCompat.getDrawable(activity,
-        drawable.default_background)
+        drawable.default_background)!!
     mMetrics = DisplayMetrics()
     activity.windowManager.defaultDisplay.getMetrics(mMetrics)
   }
@@ -67,14 +67,19 @@ class BackgroundManager(private var activity: Activity) {
     val width = mMetrics.widthPixels
     val height = mMetrics.heightPixels
 
-    GlideApp.with(activity).load(uri).centerCrop().error(
-        mDefaultBackground).into<SimpleTarget<Drawable>>(
+    if (uri == null || uri.trim().isEmpty()) {
+      mBackgroundManager.drawable = mDefaultBackground
+    }
+    else {
+      GlideApp.with(activity).load(uri).centerCrop().error(
+        mDefaultBackground
+      ).into<SimpleTarget<Drawable>>(
         object : SimpleTarget<Drawable>(width, height) {
           override fun onResourceReady(resource: Drawable?, transition: Transition<in Drawable>?) {
             mBackgroundManager.drawable = resource
           }
         })
-
+    }
 
     mBackgroundTimer?.cancel()
   }

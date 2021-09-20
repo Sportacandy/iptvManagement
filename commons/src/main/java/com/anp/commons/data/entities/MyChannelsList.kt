@@ -13,8 +13,8 @@ open class MyChannelsList(var id: String, var name: String, var url: String?
   constructor() : this("", "", "")
 
   constructor(source: Parcel) : this(
-      source.readString(),
-      source.readString(),
+      source.readString().toString(),
+      source.readString().toString(),
       source.readString()
   ) {
     listType = source.readInt()

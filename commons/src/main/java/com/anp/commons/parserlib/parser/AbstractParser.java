@@ -20,6 +20,9 @@ import com.anp.commons.parserlib.exception.JPlaylistParserException;
 import com.anp.commons.data.entities.ChannelsList;
 import com.anp.commons.data.entities.Channel;
 import java.io.IOException;
+import java.util.Arrays;
+import java.util.List;
+
 import org.xml.sax.SAXException;
 
 public abstract class AbstractParser implements Parser {
@@ -75,6 +78,57 @@ public abstract class AbstractParser implements Parser {
 
     if (playListEntry.getId() == null || playListEntry.getId().isEmpty()) {
       playListEntry.setId(playListEntry.getTitleChannel());
+    }
+  }
+
+  protected void parseAttributtes(String line, List<Channel> channels) {
+    String title = line.replaceAll("^(.*?),", "");
+    String logo = null;
+    String id = null;
+    String[] groups = new String[] { DEFAULT_GROUP_NAME };
+
+    String[] lineString = line.split(" ");
+    for (String attributte : lineString) {
+      if (attributte.contains(Channel.LOGO)) {
+        String urlLogo = attributte.replaceAll(Channel.LOGO, "")
+                .replaceAll(Channel.EQUAL, "")
+                .replaceAll("^\"|\"$", "");
+
+        logo = urlLogo.trim();
+      }
+
+      if (attributte.contains(Channel.ATTR_ID) || attributte.contains(Channel.ATTR_TVG_ID)) {
+        id = attributte.replaceAll(Channel.ATTR_TVG_ID, "")
+                .replaceAll(Channel.ATTR_ID, "")
+                .replaceAll(Channel.EQUAL, "")
+                .replaceAll("^\"|\"$", "");
+      }
+
+      if (attributte.contains(Channel.GROUP)) {
+        String groupNames = attributte.replaceAll(Channel.GROUP, "")
+                .replaceAll(Channel.EQUAL, "")
+                .replaceAll("^\"+|\"+$", "");
+
+        String[] groupArray = groupNames.split(",");
+        if (groupArray.length > 0) {
+          groups = Arrays.copyOf(groupArray, groupArray.length - 1);
+        }
+        for (int i = 0; i < groups.length; i++) {
+          groups[i] = groups[i].replaceAll("\"", "");
+        }
+      }
+    }
+
+    if (id == null || id.isEmpty()) {
+      id = title;
+    }
+
+    for (String group : groups) {
+      group = group.replaceAll("\"", "");
+      Channel channel = new Channel(title, group);
+      channel.setLogo(logo);
+      channel.setId(id);
+      channels.add(channel);
     }
   }
 }

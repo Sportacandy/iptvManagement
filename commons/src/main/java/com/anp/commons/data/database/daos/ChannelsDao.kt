@@ -56,7 +56,12 @@ class ChannelsDao : BaseDao() {
           myChannelsList.id).distinct(ChannelRealm.GROUP_FIELD).sort(ChannelRealm.GROUP_FIELD,
           ASCENDING)
 
-      result = ChannelRealm.parseFromListRealm(resultQuery)
+      //val resAll = realm.where(ChannelRealm::class.java).equalTo(ChannelRealm.SOURCE_LIST_ID_FIELD, myChannelsList.id).findAll().toList()
+
+      //val res0 = realm.where(ChannelRealm::class.java).equalTo(ChannelRealm.SOURCE_LIST_ID_FIELD, myChannelsList.id).findAll()
+
+      val list = resultQuery.findAll().toList()
+      result = ChannelRealm.parseFromListRealm(list)
 
     }
     closeRealmInstance(realmInstance)
@@ -74,7 +79,8 @@ class ChannelsDao : BaseDao() {
           ChannelRealm.TITLE_CHANNEL_FIELD,
           ASCENDING)
 
-      result = ChannelRealm.parseFromListRealm(resultQuery)
+      val list = resultQuery.findAll().toList()
+      result = ChannelRealm.parseFromListRealm(list)
 
     }
     closeRealmInstance(realmInstance)
@@ -91,7 +97,7 @@ class ChannelsDao : BaseDao() {
 
       val resultQuery = realm.where(ChannelRealm::class.java)
           .like(ChannelRealm.TITLE_CHANNEL_FIELD,  searchPattern, Case.INSENSITIVE)
-          .findAllSorted(ChannelRealm.TITLE_CHANNEL_FIELD, Sort.ASCENDING)
+          .sort(ChannelRealm.TITLE_CHANNEL_FIELD, Sort.ASCENDING).findAll()
 
       result = ChannelRealm.parseFromListRealm(resultQuery)
 
@@ -107,7 +113,7 @@ class ChannelsDao : BaseDao() {
 
       val resultQuery = realm.where(ChannelRealm::class.java)
           .equalTo(ChannelRealm.ID_FIELD,  id, Case.INSENSITIVE)
-          .findAllSorted(ChannelRealm.ID_FIELD, Sort.ASCENDING)
+          .sort(ChannelRealm.ID_FIELD, Sort.ASCENDING).findAll()
 
        result = resultQuery
 

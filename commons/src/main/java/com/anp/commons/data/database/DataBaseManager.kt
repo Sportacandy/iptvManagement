@@ -28,7 +28,9 @@ object DataBaseManager {
 //        .schemaVersion(1)
 //        .build()
     //FIXME only development
-    val config = RealmConfiguration.Builder().deleteRealmIfMigrationNeeded().build()
+    val builder = RealmConfiguration.Builder()
+    builder.allowWritesOnUiThread(true)
+    val config = builder.deleteRealmIfMigrationNeeded().build()
     Realm.setDefaultConfiguration(config)
   }
 

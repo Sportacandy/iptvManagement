@@ -6,7 +6,7 @@ import android.content.Context
 object SharedPreferenceRepository {
 
 
-  private val OFFSET_TIME_DOWNLOAD_EPG = 2 * 24 * 60 * 60 * 1000 //48 hours
+  private val OFFSET_TIME_DOWNLOAD_EPG = 4 * 60 * 60 * 1000 //4 hours
   private val PREFERENCES_NAME = "iptc_management"
   private val LAST_TIME_SAVE_EPG_KEY = "com.anp.iptvmanagement.last_time_save_epg_key"
 

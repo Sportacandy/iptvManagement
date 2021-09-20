@@ -48,7 +48,7 @@ object PreferencesStorage {
   }
 
   fun getEpgUrl(context: Context)
-      = getSharedPreferences(context).getString(EPG_URL_KEY, "")
+      = getSharedPreferences(context).getString(EPG_URL_KEY, "").toString()
 
 
   fun deleteEpgData(context: Context) {

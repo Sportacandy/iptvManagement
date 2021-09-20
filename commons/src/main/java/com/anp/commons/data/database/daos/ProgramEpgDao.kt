@@ -26,11 +26,10 @@ class ProgramEpgDao : BaseDao() {
     realmInstance.executeTransaction { realm ->
       val currentTime = System.currentTimeMillis()
       val resultQuery = realm.where(ProgramEpgRealm::class.java)
-          .equalTo(ProgramEpgRealm.CHANNEL_ID_FIELD_NAME, channel.id)
-          .lessThan(ProgramEpgRealm.START_TIME_FIELD_NAME, currentTime)
-          .greaterThan(ProgramEpgRealm.END_TIME_FIELD_NAME, currentTime)
-          .findFirst()
-
+        .equalTo(ProgramEpgRealm.CHANNEL_ID_FIELD_NAME, channel.id)
+        .lessThan(ProgramEpgRealm.START_TIME_FIELD_NAME, currentTime)
+        .greaterThan(ProgramEpgRealm.END_TIME_FIELD_NAME, currentTime)
+        .findFirst()
       resultQuery?.let { programEpgRealm ->
         val program = ProgramEpgRealm.toProgram(programEpgRealm)
         result.add(program)

@@ -35,7 +35,7 @@
     </activity>
 
 
-    <activity android:name=".presentations.player.PlaybackActivity" />
+<!--    <activity android:name=".presentations.player.PlaybackActivity" />-->
     <activity android:name=".presentations.error.BrowseErrorActivity" />
     <activity android:name=".presentations.verticalgridchannels.VerticalGridChannelsActivity" />
 
