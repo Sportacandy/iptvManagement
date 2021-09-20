@@ -7,9 +7,9 @@ import android.support.v17.leanback.widget.HeaderItem
 import android.support.v17.leanback.widget.ListRow
 import android.support.v17.leanback.widget.ListRowPresenter
 import android.support.v4.content.ContextCompat
-import com.anp.commons.data.MyChannelsListRepository
-import com.anp.commons.data.entities.MyChannelsList
-import com.anp.commons.presentations.base.BaseView.SourceListView
+import com.anp.iptvmanagement.data.MyChannelsListRepository
+import com.anp.iptvmanagement.data.entities.MyChannelsList
+import com.anp.iptvmanagement.presentations.base.BaseView.SourceListView
 import com.anp.iptvmanagement.R
 import com.anp.iptvmanagement.R.color
 import com.anp.iptvmanagement.R.string

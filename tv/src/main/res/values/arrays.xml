@@ -15,6 +15,16 @@
   -->
 
 <resources>
+    <string-array name="pref_player_entries">
+        <item>@string/player_vlc</item>
+        <item>@string/player_mx</item>
+        <item>@string/player_mx_free</item>
+    </string-array>
+    <string-array name="pref_player_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
     <array name="pref_parent_control_entries">
         <item>Everyone</item>
         <item>Low maturity</item>

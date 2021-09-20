@@ -7,11 +7,11 @@ import android.content.SharedPreferences.OnSharedPreferenceChangeListener
 import android.os.Bundle
 import android.support.v17.preference.LeanbackPreferenceFragment
 import android.support.v7.preference.ListPreference
-import com.anp.commons.data.PreferencesStorage
-import com.anp.commons.data.entities.Player
-import com.anp.commons.helpers.HelperApp
+import com.anp.iptvmanagement.data.PreferencesStorage
+import com.anp.iptvmanagement.data.entities.Player
+import com.anp.iptvmanagement.helpers.HelperApp
 
-import com.anp.commons.helpers.HelperSettings
+import com.anp.iptvmanagement.helpers.HelperSettings
 import com.anp.iptvmanagement.R
 import java.util.Stack
 

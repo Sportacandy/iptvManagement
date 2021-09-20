@@ -1,8 +1,8 @@
 package com.anp.iptvmanagement.presentations.addchannelslistepg
 
 import android.support.v17.leanback.widget.GuidedAction
-import com.anp.commons.data.MyChannelsListRepository
-import com.anp.commons.data.entities.MyChannelsList
+import com.anp.iptvmanagement.data.MyChannelsListRepository
+import com.anp.iptvmanagement.data.entities.MyChannelsList
 
 
 class DeleteChannelGuideStep: EditChannelGuideStep() {

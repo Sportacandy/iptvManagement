@@ -9,11 +9,11 @@ import android.support.v17.leanback.widget.Presenter.ViewHolder
 import android.support.v17.leanback.widget.Row
 import android.support.v17.leanback.widget.RowPresenter
 import android.support.v17.leanback.widget.VerticalGridPresenter
-import com.anp.commons.data.ChannelsRepository
-import com.anp.commons.data.entities.Channel
-import com.anp.commons.data.entities.MyChannelsList
-import com.anp.commons.helpers.HelperPlayer
-import com.anp.commons.presentations.base.BaseView.GridChannelsView
+import com.anp.iptvmanagement.data.ChannelsRepository
+import com.anp.iptvmanagement.data.entities.Channel
+import com.anp.iptvmanagement.data.entities.MyChannelsList
+import com.anp.iptvmanagement.helpers.HelperPlayer
+import com.anp.iptvmanagement.presentations.base.BaseView.GridChannelsView
 import com.anp.iptvmanagement.manager.BackgroundManager
 import com.anp.iptvmanagement.manager.NavigationManager
 import com.anp.iptvmanagement.presentations.initialscreen.ItemViewSelectedListener

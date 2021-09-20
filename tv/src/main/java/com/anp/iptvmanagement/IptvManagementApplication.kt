@@ -1,8 +1,7 @@
 package com.anp.iptvmanagement
 
-import android.app.Application
 import android.support.multidex.MultiDexApplication
-import com.anp.commons.data.database.DataBaseManager
+import com.anp.iptvmanagement.data.database.DataBaseManager
 
 class IptvManagementApplication : MultiDexApplication() {
 

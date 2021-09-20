@@ -4,8 +4,8 @@ import android.os.Bundle
 import android.support.v17.leanback.widget.GuidanceStylist
 import android.support.v17.leanback.widget.GuidedAction
 import android.support.v4.content.ContextCompat
-import com.anp.commons.data.MyChannelsListRepository
-import com.anp.commons.data.entities.MyChannelsList
+import com.anp.iptvmanagement.data.MyChannelsListRepository
+import com.anp.iptvmanagement.data.entities.MyChannelsList
 import com.anp.iptvmanagement.R
 import com.anp.iptvmanagement.presentations.base.BaseGuideStep
 import rx.Observer

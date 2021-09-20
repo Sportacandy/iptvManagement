@@ -8,7 +8,7 @@ import android.support.v17.leanback.widget.Row
 import android.support.v17.leanback.widget.RowPresenter
 import android.support.v4.app.ActivityOptionsCompat
 import android.widget.Toast
-import com.anp.commons.data.entities.Channel
+import com.anp.iptvmanagement.data.entities.Channel
 import com.anp.iptvmanagement.R
 import com.anp.iptvmanagement.R.string
 import com.anp.iptvmanagement.data.SettingOption

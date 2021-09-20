@@ -7,11 +7,11 @@ import android.support.v4.content.ContextCompat
 import android.view.Gravity
 import android.view.ViewGroup
 import android.widget.TextView
-import com.anp.commons.data.MyChannelsListRepository
-import com.anp.commons.data.entities.Channel
-import com.anp.commons.presentations.base.BaseView
-import com.anp.commons.presentations.base.BaseView.SourceListView
-import com.anp.commons.presentations.observers.MyChannelsListObserver
+import com.anp.iptvmanagement.data.MyChannelsListRepository
+import com.anp.iptvmanagement.data.entities.Channel
+import com.anp.iptvmanagement.presentations.base.BaseView
+import com.anp.iptvmanagement.presentations.base.BaseView.SourceListView
+import com.anp.iptvmanagement.presentations.observers.MyChannelsListObserver
 import com.anp.iptvmanagement.R.color
 
 

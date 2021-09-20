@@ -2,11 +2,11 @@ package com.anp.iptvmanagement.presentations.verticalgridchannels
 
 import android.support.v17.leanback.widget.Presenter
 import android.view.ViewGroup
-import com.anp.commons.data.ChannelsRepository
-import com.anp.commons.data.entities.Channel
-import com.anp.commons.presentations.base.BaseView
-import com.anp.commons.presentations.base.BaseView.GridChannelsView
-import com.anp.commons.presentations.observers.GridChannelsFragmentObserver
+import com.anp.iptvmanagement.data.ChannelsRepository
+import com.anp.iptvmanagement.data.entities.Channel
+import com.anp.iptvmanagement.presentations.base.BaseView
+import com.anp.iptvmanagement.presentations.base.BaseView.GridChannelsView
+import com.anp.iptvmanagement.presentations.observers.GridChannelsFragmentObserver
 import com.anp.iptvmanagement.presentations.widgets.EpgImageCardView
 
 

@@ -4,9 +4,9 @@ import android.app.Activity
 import android.content.Context
 import android.content.Intent
 import android.support.v4.app.Fragment
-import com.anp.commons.Constants
-import com.anp.commons.data.entities.Channel
-import com.anp.commons.helpers.HelperPlayer
+import com.anp.iptvmanagement.Constants
+import com.anp.iptvmanagement.data.entities.Channel
+import com.anp.iptvmanagement.helpers.HelperPlayer
 import com.anp.iptvmanagement.presentations.addchannelslistepg.AddChannelsListActivity
 import com.anp.iptvmanagement.presentations.epgsettings.EpgSettingsActivity
 import com.anp.iptvmanagement.presentations.settings.SettingsActivity

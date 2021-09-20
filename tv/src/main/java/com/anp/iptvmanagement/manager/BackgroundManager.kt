@@ -6,7 +6,7 @@ import android.os.Handler
 import android.support.v17.leanback.app.BackgroundManager
 import android.support.v4.content.ContextCompat
 import android.util.DisplayMetrics
-import com.anp.commons.managers.GlideApp
+import com.anp.iptvmanagement.managers.GlideApp
 import com.anp.iptvmanagement.R.drawable
 import com.bumptech.glide.request.target.SimpleTarget
 import com.bumptech.glide.request.transition.Transition

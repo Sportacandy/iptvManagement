@@ -4,10 +4,10 @@ import android.annotation.SuppressLint
 import android.content.Context
 import android.support.v17.leanback.widget.Presenter
 import android.view.View
-import com.anp.commons.data.EpgRepository
-import com.anp.commons.data.entities.Channel
-import com.anp.commons.data.entities.ProgramEpg
-import com.anp.commons.managers.ImageLoader
+import com.anp.iptvmanagement.data.EpgRepository
+import com.anp.iptvmanagement.data.entities.Channel
+import com.anp.iptvmanagement.data.entities.ProgramEpg
+import com.anp.iptvmanagement.managers.ImageLoader
 import com.anp.iptvmanagement.presentations.widgets.EpgImageCardView
 import rx.Subscriber
 

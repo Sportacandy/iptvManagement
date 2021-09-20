@@ -5,10 +5,10 @@ import android.support.v17.leanback.widget.GuidanceStylist
 import android.support.v17.leanback.widget.GuidedAction
 import android.support.v4.content.ContextCompat
 import android.util.Log
-import com.anp.commons.data.AddChannelsListRepository
-import com.anp.commons.data.entities.MyChannelsList
-import com.anp.commons.data.responses.BaseResponse
-import com.anp.commons.data.responses.ResponseParseChannelsList
+import com.anp.iptvmanagement.data.AddChannelsListRepository
+import com.anp.iptvmanagement.data.entities.MyChannelsList
+import com.anp.iptvmanagement.data.responses.BaseResponse
+import com.anp.iptvmanagement.data.responses.ResponseParseChannelsList
 import com.anp.iptvmanagement.R
 import com.anp.iptvmanagement.presentations.base.BaseGuideStep
 import rx.Observer

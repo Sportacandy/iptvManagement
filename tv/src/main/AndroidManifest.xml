@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.anp.iptvmanagement">
+    package="com.anp.iptvmanagement"
+    android:versionCode="2"
+    android:versionName="1.0">
 
   <uses-permission android:name="android.permission.INTERNET" />
   <uses-permission android:name="android.permission.RECORD_AUDIO" />
@@ -12,6 +14,10 @@
   <uses-feature
       android:name="android.software.leanback"
       android:required="true" />
+
+  <queries>
+    <package android:name="com.anp.iptvmanagement" />
+  </queries>
 
   <application
       android:allowBackup="true"
@@ -29,7 +35,7 @@
         android:screenOrientation="landscape">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />
-
+        <category android:name="android.intent.category.LAUNCHER" />
         <category android:name="android.intent.category.LEANBACK_LAUNCHER" />
       </intent-filter>
     </activity>
@@ -59,11 +65,11 @@
 
     <service
         android:enabled="true"
-        android:name="com.anp.commons.data.service.SaveChannelsService" />
+        android:name="com.anp.iptvmanagement.data.service.SaveChannelsService" />
 
     <service
         android:enabled="true"
-        android:name="com.anp.commons.data.service.SaveEpgService" />
+        android:name="com.anp.iptvmanagement.data.service.SaveEpgService" />
   </application>
 
 </manifest>

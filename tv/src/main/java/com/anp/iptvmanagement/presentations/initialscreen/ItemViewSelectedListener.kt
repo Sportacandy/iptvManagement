@@ -4,7 +4,7 @@ import android.support.v17.leanback.widget.OnItemViewSelectedListener
 import android.support.v17.leanback.widget.Presenter.ViewHolder
 import android.support.v17.leanback.widget.Row
 import android.support.v17.leanback.widget.RowPresenter
-import com.anp.commons.data.entities.Channel
+import com.anp.iptvmanagement.data.entities.Channel
 import com.anp.iptvmanagement.manager.BackgroundManager
 
 
